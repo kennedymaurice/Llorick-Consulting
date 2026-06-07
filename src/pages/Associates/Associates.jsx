@@ -1,5 +1,3 @@
-// src/pages/Associates/Associates.jsx
-
 import { Link } from "react-router-dom";
 import {
     ArrowRight,

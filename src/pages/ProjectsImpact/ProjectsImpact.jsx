@@ -1,5 +1,3 @@
-// src/pages/ProjectsImpact/ProjectsImpact.jsx
-
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Globe2, Sparkles } from "lucide-react";
 import {

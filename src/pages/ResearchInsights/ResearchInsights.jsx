@@ -1,5 +1,3 @@
-// src/pages/ResearchInsights/ResearchInsights.jsx
-
 import { Link } from "react-router-dom";
 import {
     ArrowRight,
