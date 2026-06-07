@@ -306,7 +306,7 @@ const Associates = () => {
                     </div>
 
                     <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
-                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                             <p>
                                 For each assignment, Llorick Consulting
                                 identifies the expertise required to achieve the

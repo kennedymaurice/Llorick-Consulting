@@ -220,7 +220,7 @@ const Services = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Public health and development challenges often
                             require integrated solutions that combine research,

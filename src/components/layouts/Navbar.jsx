@@ -51,9 +51,10 @@ const Navbar = () => {
                         className="group flex items-center transition-opacity duration-300 hover:opacity-90"
                     >
                         <img
-                            src="/llorick-logo-horizontal-white.png"
+                            src="/llorick-logo-horizontal-white.webp"
                             alt="Llorick Consulting"
                             className="h-14 w-auto"
+                            loading="eager"
                         />
                     </Link>
 
@@ -180,7 +181,7 @@ const Navbar = () => {
                             className="flex flex-col"
                         >
                             <img
-                                src="/llorick-logo-horizontal-white.png"
+                                src="/llorick-logo-horizontal-white.webp"
                                 alt="Llorick Consulting"
                                 className="h-14 w-auto"
                             />

@@ -235,7 +235,7 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Llorick Consulting is a global health, research,
                             policy, and development advisory firm committed to
@@ -440,7 +440,7 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Llorick Consulting exists at the intersection of
                             global health, research, policy, and implementation.
@@ -525,7 +525,7 @@ const About = () => {
                     </div>
 
                     <div>
-                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                             <p>
                                 Llorick Consulting was founded by Erick Agure, a
                                 global health and public health professional
@@ -574,7 +574,7 @@ const About = () => {
                             </h2>
                         </div>
 
-                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-300">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-300">
                             <p>
                                 Public health challenges are increasingly
                                 interconnected. Climate change, nutrition,

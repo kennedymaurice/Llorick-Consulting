@@ -70,9 +70,10 @@ const Footer = () => {
                     <div>
                         <Link to="/" className="inline-flex flex-col">
                             <img
-                                src="/llorick-logo-horizontal-white.png"
+                                src="/llorick-logo-horizontal-white.webp"
                                 alt="Llorick Consulting"
                                 className="h-14 w-auto"
+                                loading="eager"
                             />
                         </Link>
 

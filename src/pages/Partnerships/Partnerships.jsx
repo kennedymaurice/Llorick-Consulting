@@ -420,7 +420,7 @@ const Partnerships = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-300">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-300">
                         <p>
                             Our work is informed by experience and collaboration
                             across diverse cultural, institutional, and

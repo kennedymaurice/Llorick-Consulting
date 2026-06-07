@@ -281,7 +281,7 @@ const Training = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Organizations are only as effective as the people
                             who lead, manage, and implement their programs.
@@ -506,7 +506,7 @@ const Training = () => {
                                 </h2>
                             </div>
 
-                            <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
+                            <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                                 <p>
                                     Every organization faces unique challenges.
                                 </p>

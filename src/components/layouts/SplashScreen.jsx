@@ -29,9 +29,10 @@ const SplashScreen = () => {
             >
                 <div className="text-center">
                     <img
-                        src="/llorick-logo-horizontal-white.png"
+                        src="/llorick-logo-horizontal-white.webp"
                         alt="Llorick Consulting"
                         className="h-14 w-auto"
+                        loading="eager"
                     />
                 </div>
             </motion.div>

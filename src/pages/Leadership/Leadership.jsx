@@ -413,7 +413,7 @@ const Leadership = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Erick&apos;s academic journey reflects a strong
                             commitment to evidence, learning, and innovation.
@@ -450,7 +450,7 @@ const Leadership = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Beyond technical engagements, Erick is passionate
                             about promoting dialogue, learning, and knowledge
@@ -494,7 +494,7 @@ const Leadership = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Erick believes that effective leadership requires a
                             combination of technical excellence, humility,

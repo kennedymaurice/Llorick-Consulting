@@ -146,7 +146,7 @@ const ResearchInsights = () => {
                         </div>
                     </div>
 
-                    <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
+                    <div className="rounded-[2rem] border border-white/10 bg-white/5 p-5 md:p-8 shadow-2xl backdrop-blur">
                         <div className="flex items-center gap-4">
                             <Brain className="h-12 w-12 shrink-0 text-[#C9A24D]" />
 
@@ -198,7 +198,7 @@ const ResearchInsights = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Public health challenges continue to evolve in
                             complexity. From climate change and disease
@@ -320,7 +320,7 @@ const ResearchInsights = () => {
                             </p>
                         </div>
 
-                        <div className="mt-7 space-y-6 text-lg leading-9 text-slate-600">
+                        <div className="mt-7 space-y-6 text-lg leading-8 text-slate-600">
                             <p>
                                 Llorick Consulting publishes evidence-informed
                                 articles, policy commentaries, research
@@ -356,7 +356,7 @@ const ResearchInsights = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-300">
+                    <div className="space-y-6 text-lg leading-8 text-slate-300">
                         <p>
                             Through our insights platform, we seek to foster
                             informed dialogue, encourage evidence-based

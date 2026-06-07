@@ -7,7 +7,7 @@ const SEO = ({
     title,
     description,
     path = "",
-    image = "/llorick-icon.png",
+    image = "/llorick-icon.webp",
     type = "website",
     schema,
     noindex = false,

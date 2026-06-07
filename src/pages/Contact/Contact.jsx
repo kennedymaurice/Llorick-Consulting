@@ -366,7 +366,10 @@ ${formData.message}
                         className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8"
                     >
                         <div>
-                            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                            <p
+                                id="contact-form"
+                                className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]"
+                            >
                                 Contact Form
                             </p>
 
@@ -660,20 +663,20 @@ ${formData.message}
                         </p>
 
                         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                            <Link
-                                to="/contact"
+                            <a
+                                href="#contact-form"
                                 className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#C9A24D] hover:text-[#0F172A]"
                             >
                                 Start a Conversation
                                 <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
+                            </a>
 
-                            <Link
-                                to="/contact"
+                            <a
+                                href="#contact-form"
                                 className="inline-flex items-center justify-center rounded-full border border-slate-300 px-7 py-4 text-sm font-bold text-[#0F172A] transition hover:border-[#C9A24D] hover:text-[#C9A24D]"
                             >
                                 Request a Consultation
-                            </Link>
+                            </a>
 
                             <Link
                                 to="/partnerships"
