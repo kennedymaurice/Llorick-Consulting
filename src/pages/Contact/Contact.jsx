@@ -614,7 +614,7 @@ ${formData.message}
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-6 md:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
                         {reasons.map((reason) => {
                             const Icon = reason.icon;
 
@@ -644,8 +644,8 @@ ${formData.message}
             {/* Looking Forward */}
             <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 text-center md:p-16">
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-5 md:p-8 text-center md:p-16">
+                        <p className="text-sm font-semibold uppercse tracking-[0.25em] text-[#C9A24D]">
                             Looking Forward
                         </p>
 
@@ -662,7 +662,7 @@ ${formData.message}
                             Consulting can contribute to your goals.
                         </p>
 
-                        <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                        <div className="mt-5 md:mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                             <a
                                 href="#contact-form"
                                 className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-7 py-4 text-sm font-bold text-white transition hover:bg-[#C9A24D] hover:text-[#0F172A]"
