@@ -9,13 +9,13 @@ const Services = () => {
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-4xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Service Portfolio
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Advisory services for stronger systems, better
                             evidence, and sustainable impact.
                         </h1>
@@ -32,40 +32,93 @@ const Services = () => {
             </section>
 
             {/* Intro */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            What We Offer
-                        </p>
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
-                            A multidisciplinary service portfolio for complex
-                            health and development challenges.
-                        </h2>
-                    </div>
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto max-w-7xl px-5 lg:px-8">
+                    <div className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-xl">
+                        <div className="grid lg:grid-cols-[0.95fr_1.05fr]">
+                            {/* Image */}
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
-                        <p>
-                            Our services are designed for governments,
-                            development agencies, NGOs, healthcare
-                            organizations, research institutions, universities,
-                            foundations, and private-sector actors seeking
-                            evidence-based solutions.
-                        </p>
+                            <div className="relative">
+                                <img
+                                    src="/about.webp"
+                                    alt="Global health advisory and development consulting"
+                                    className="h-full min-h-[450px] w-full object-cover"
+                                />
 
-                        <p>
-                            We combine global health expertise, research
-                            capability, policy insight, monitoring and
-                            evaluation, systems thinking, and practical
-                            implementation support to help institutions move
-                            from evidence to action.
-                        </p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent" />
+
+                                <div className="absolute bottom-0 left-0 p-6 md:p-10">
+                                    <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#C9A24D]">
+                                        What We Offer
+                                    </p>
+
+                                    <h2 className="mt-4 max-w-xl text-3xl font-bold text-white md:text-5xl">
+                                        Evidence-Based Solutions for Complex
+                                        Health and Development Challenges.
+                                    </h2>
+                                </div>
+                            </div>
+
+                            {/* Content */}
+
+                            <div className="p-6 md:p-8 lg:p-10">
+                                <p className="text-lg leading-8 text-slate-600">
+                                    Our services are designed for governments,
+                                    development agencies, NGOs, healthcare
+                                    organizations, research institutions,
+                                    universities, foundations, and
+                                    private-sector actors seeking evidence-based
+                                    solutions.
+                                </p>
+
+                                <p className="mt-4 text-lg leading-8 text-slate-600">
+                                    We combine global health expertise, research
+                                    capability, policy insight, monitoring and
+                                    evaluation, systems thinking, and practical
+                                    implementation support to help institutions
+                                    move from evidence to action.
+                                </p>
+
+                                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                                    {[
+                                        "Global Health Advisory",
+                                        "Health Systems Strengthening",
+                                        "Research & Evidence",
+                                        "Monitoring & Evaluation",
+                                        "Policy & Governance",
+                                        "Capacity Building",
+                                    ].map((item) => (
+                                        <div
+                                            key={item}
+                                            className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4"
+                                        >
+                                            <p className="font-semibold text-[#0F172A]">
+                                                {item}
+                                            </p>
+                                        </div>
+                                    ))}
+                                </div>
+
+                                <div className="mt-6 rounded-[1.5rem] bg-[#0F172A] p-6 text-white">
+                                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                        Our Approach
+                                    </p>
+
+                                    <p className="mt-3 text-lg leading-8 text-slate-300">
+                                        We help institutions move from evidence
+                                        to action through research, strategy,
+                                        implementation support, and continuous
+                                        learning.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Services List */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -76,7 +129,7 @@ const Services = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-14 space-y-8">
+                    <div className="mt-6 md:mt-10 space-y-8">
                         {services.map((service, index) => {
                             const Icon = service.icon;
 
@@ -86,7 +139,7 @@ const Services = () => {
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
                                     <div className="grid gap-0 lg:grid-cols-[0.85fr_1.15fr]">
-                                        <div className="bg-[#0F172A] p-8 text-white md:p-10">
+                                        <div className="bg-[#0F172A] p-6 text-white md:p-10">
                                             <div className="flex items-center justify-between gap-6">
                                                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#C9A24D] text-[#0F172A]">
                                                     <Icon className="h-6 w-6" />
@@ -119,7 +172,7 @@ const Services = () => {
                                             </div>
                                         </div>
 
-                                        <div className="p-8 md:p-10">
+                                        <div className="p-6 md:p-10">
                                             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                                 Areas of Support
                                             </p>
@@ -149,8 +202,8 @@ const Services = () => {
             </section>
 
             {/* Why This Matters */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Integrated Support
@@ -179,7 +232,7 @@ const Services = () => {
             </section>
 
             {/* CTA */}
-            <section className="pb-24">
+            <section className="pb-6 md:pb-12 lg:pb-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-[2rem] bg-[#0F172A] p-8 text-center text-white md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">

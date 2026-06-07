@@ -229,7 +229,7 @@ const Partnerships = () => {
             <section className="py-24">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-                        <div>
+                        <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Our Partnership Philosophy
                             </p>
@@ -342,7 +342,7 @@ const Partnerships = () => {
             <section className="py-24">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-                        <div>
+                        <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Partnership Models
                             </p>

@@ -17,12 +17,12 @@ const ProjectsImpact = () => {
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-5xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Projects & Impact
                         </div>
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Delivering Meaningful Impact Through Evidence,
                             Collaboration, and Action.
                         </h1>
@@ -33,14 +33,6 @@ const ProjectsImpact = () => {
                                 working to improve health outcomes, strengthen
                                 systems, generate evidence, build capacity, and
                                 advance sustainable development.
-                            </p>
-
-                            <p>
-                                Our experience spans diverse settings, sectors,
-                                and geographies, contributing to initiatives
-                                that address public health challenges,
-                                strengthen institutions, inform policy, and
-                                improve community well-being.
                             </p>
 
                             <p>
@@ -56,9 +48,9 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Impact Approach */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                         <div>
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Our Approach to Impact
@@ -85,13 +77,15 @@ const ProjectsImpact = () => {
                                         key={principle.title}
                                         className="group rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                     >
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-xl font-bold text-[#0F172A]">
-                                            {principle.title}
-                                        </h3>
+                                            <h3 className="text-xl font-bold leading-tight text-[#0F172A]">
+                                                {principle.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 text-sm leading-7 text-slate-600">
                                             {principle.description}
@@ -105,7 +99,7 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Areas of Engagement */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -118,7 +112,7 @@ const ProjectsImpact = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="mt-6 md:mt-12 grid gap-6 lg:grid-cols-2">
                         {engagementAreas.map((area) => {
                             const Icon = area.icon;
 
@@ -127,21 +121,23 @@ const ProjectsImpact = () => {
                                     key={area.title}
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
-                                    <div className="border-b border-slate-200 p-8">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                    <div className="border-b border-slate-200 p-5 md:p-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#0F172A]">
-                                            {area.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                                {area.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 leading-7 text-slate-600">
                                             {area.description}
                                         </p>
                                     </div>
 
-                                    <div className="p-8">
+                                    <div className="p-4 md:p-8">
                                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                             Representative areas include
                                         </p>
@@ -168,22 +164,21 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Illustrative Themes */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-                        <div>
+                    <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                        <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Illustrative Engagement Themes
                             </p>
 
                             <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                                 Thematic areas where our expertise contributes
-                                to meaningful institutional and community
-                                impact.
+                                to meaningful impact.
                             </h2>
 
                             <p className="mt-6 text-lg leading-8 text-slate-600">
-                                The following examples represent the types of
+                                These examples represent the types of
                                 assignments and thematic areas in which Llorick
                                 Consulting has developed expertise.
                             </p>
@@ -222,15 +217,17 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Geographic Reach */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
                         <div>
-                            <Globe2 className="h-10 w-10 text-[#C9A24D]" />
+                            <div className="flex items-center gap-3">
+                                <Globe2 className="h-10 w-10 text-[#C9A24D]" />
 
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                                Geographic Reach
-                            </p>
+                                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                    Geographic Reach
+                                </p>
+                            </div>
 
                             <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                                 Global perspective informed by diverse regional
@@ -263,7 +260,7 @@ const ProjectsImpact = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 rounded-[2rem] border border-white/10 bg-white/5 p-8">
+                    <div className="mt-6 md:mt-12 rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8">
                         <p className="text-lg leading-8 text-slate-300">
                             This global perspective enables us to combine
                             international best practices with local realities.
@@ -273,9 +270,9 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Creating Value */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Creating Value for Partners
                         </p>
@@ -303,16 +300,18 @@ const ProjectsImpact = () => {
             </section>
 
             {/* Looking Ahead */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-white p-8 shadow-sm md:p-14">
-                        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+                    <div className="rounded-[2rem] bg-white p-6 md:p-14">
+                        <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
                             <div>
-                                <Sparkles className="h-10 w-10 text-[#C9A24D]" />
+                                <div className="flex items-center gap-3">
+                                    <Sparkles className="h-10 w-10 text-[#C9A24D]" />
 
-                                <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                                    Looking Ahead
-                                </p>
+                                    <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                        Looking Ahead
+                                    </p>
+                                </div>
 
                                 <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                                     Transforming evidence into action and action
@@ -320,7 +319,7 @@ const ProjectsImpact = () => {
                                 </h2>
                             </div>
 
-                            <div className="space-y-6 text-lg leading-9 text-slate-600">
+                            <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                                 <p>
                                     The challenges facing health systems and
                                     communities continue to evolve. Climate
@@ -348,9 +347,9 @@ const ProjectsImpact = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-[#0F172A] p-8 text-center text-white md:p-16">
+                    <div className="rounded-[2rem] bg-[#0F172A] p-6 text-center text-white md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Work With Us
                         </p>

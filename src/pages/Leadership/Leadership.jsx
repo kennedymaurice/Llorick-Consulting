@@ -243,7 +243,7 @@ const Leadership = () => {
             {/* Areas of Expertise */}
             <section className="bg-[#F8FAFC] py-24">
                 <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
-                    <div>
+                    <div className="lg:sticky lg:top-28">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Areas of Expertise
                         </p>
@@ -507,7 +507,7 @@ const Leadership = () => {
             {/* Selected Areas of Interest */}
             <section className="bg-[#F8FAFC] py-24">
                 <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
-                    <div>
+                    <div className="lg:sticky lg:top-28">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Selected Areas of Interest
                         </p>
