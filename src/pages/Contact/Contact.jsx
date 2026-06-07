@@ -310,7 +310,7 @@ ${formData.message}
                             </p>
                         </div>
 
-                        <div className="mt-6 md:mt-10 rounded-[2rem] bg-[#0F172A] p-8 text-white">
+                        <div className="mt-6 md:mt-10 rounded-[2rem] bg-[#0F172A] p-5 md:p-8 text-white">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Connect With Our Team
                             </p>
@@ -363,7 +363,7 @@ ${formData.message}
 
                     <form
                         onSubmit={handleSubmit}
-                        className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8"
+                        className="rounded-[2rem] border border-slate-200 bg-white p-5 shadow-sm md:p-8"
                     >
                         <div>
                             <p
@@ -572,7 +572,7 @@ ${formData.message}
             {/* Areas of Interest */}
             <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-5 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Areas of Interest
                         </p>
@@ -621,7 +621,7 @@ ${formData.message}
                             return (
                                 <article
                                     key={reason.title}
-                                    className="rounded-[1.5rem] border border-white/10 bg-white/5 p-7"
+                                    className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 md:p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                 >
                                     <div className="flex items-center gap-4">
                                         <Icon className="h-8 w-8 shrink-0 text-[#C9A24D]" />
