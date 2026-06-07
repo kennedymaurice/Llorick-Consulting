@@ -41,7 +41,7 @@ const Footer = () => {
     return (
         <footer className="bg-[#0F172A] text-white">
             <section className="border-b border-[#B8923F] bg-gradient-to-r from-[#C9A24D] via-[#D6B56A] to-[#C9A24D]">
-                <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-10 px-5 py-8 md:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#0F172A]">
                             Evidence • Strategy • Impact

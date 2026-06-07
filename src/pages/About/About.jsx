@@ -139,13 +139,13 @@ const About = () => {
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto grid min-h-[88vh] max-w-7xl items-center gap-12 px-5 py-24 lg:px-8 lg:py-32 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
+                <div className="relative mx-auto grid min-h-[88vh] max-w-7xl items-center gap-5 md:gap-12 px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
                     <div>
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             About Llorick Consulting
                         </div>
 
-                        <h1 className="max-w-5xl text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="max-w-5xl text-3xl font-bold tracking-tight text-white md:text-6xl">
                             A global health advisory firm built on evidence,
                             purpose, and sustainable impact.
                         </h1>
@@ -178,12 +178,12 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="relative hidden lg:block">
-                        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-                            <div className="mb-8 h-64 overflow-hidden rounded-[1.5rem] border border-white/10">
+                    <div className="relative">
+                        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur md:p-6 lg:p-8">
+                            <div className="mb-6 h-64 overflow-hidden rounded-[1.5rem] border border-white/10 sm:h-80 lg:h-64">
                                 <div className="relative h-full w-full">
                                     <img
-                                        src="/hero-public-health.webp"
+                                        src="/public-health.webp"
                                         alt="Global public health advisory"
                                         className="h-full w-full object-cover"
                                     />
@@ -218,8 +218,8 @@ const About = () => {
             </section>
 
             {/* Who We Are */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+            <section className="py-6 md:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Who We Are
@@ -258,14 +258,17 @@ const About = () => {
             </section>
 
             {/* Purpose / Mission / Vision */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-6 lg:grid-cols-3">
                         <article className="rounded-[1.5rem] bg-[#0F172A] p-8 text-white shadow-sm">
-                            <Compass className="h-9 w-9 text-[#C9A24D]" />
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
-                                Our Purpose
-                            </p>
+                            <div className="flex items-center gap-3">
+                                <Compass className="h-9 w-9 text-[#C9A24D]" />
+
+                                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                                    Our Purpose
+                                </p>
+                            </div>
                             <h3 className="mt-4 text-2xl font-bold">
                                 Bridging evidence, policy, and practice.
                             </h3>
@@ -279,10 +282,13 @@ const About = () => {
                         </article>
 
                         <article className="rounded-[1.5rem] border border-slate-200 bg-white p-8 shadow-sm">
-                            <Globe2 className="h-9 w-9 text-[#C9A24D]" />
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
-                                Our Vision
-                            </p>
+                            <div className="flex items-center gap-3">
+                                <Globe2 className="h-9 w-9 text-[#C9A24D]" />
+
+                                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                                    Our Vision
+                                </p>
+                            </div>
                             <h3 className="mt-4 text-2xl font-bold text-[#0F172A]">
                                 Healthier, more resilient, and more equitable
                                 societies.
@@ -300,10 +306,13 @@ const About = () => {
                         </article>
 
                         <article className="rounded-[1.5rem] border border-slate-200 bg-white p-8 shadow-sm">
-                            <Target className="h-9 w-9 text-[#C9A24D]" />
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
-                                Our Mission
-                            </p>
+                            <div className="flex items-center gap-3">
+                                <Target className="h-9 w-9 text-[#C9A24D]" />
+
+                                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                                    Our Mission
+                                </p>
+                            </div>
                             <h3 className="mt-4 text-2xl font-bold text-[#0F172A]">
                                 Advancing public health and sustainable
                                 development.
@@ -325,7 +334,7 @@ const About = () => {
             </section>
 
             {/* Values */}
-            <section className="py-24">
+            <section className="py-6 md:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -345,15 +354,19 @@ const About = () => {
                                     key={value.title}
                                     className="group rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                 >
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
-                                        <Icon className="h-5 w-5" />
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
+                                            <Icon className="h-5 w-5" />
+                                        </div>
+
+                                        <h3 className="text-xl font-bold leading-tight text-[#0F172A]">
+                                            {value.title}
+                                        </h3>
                                     </div>
 
-                                    <h3 className="mt-6 text-xl font-bold text-[#0F172A]">
-                                        {value.title}
-                                    </h3>
+                                    <div className="mt-5 h-px bg-slate-100" />
 
-                                    <p className="mt-4 text-sm leading-7 text-slate-600">
+                                    <p className="mt-5 text-sm leading-7 text-slate-600">
                                         {value.description}
                                     </p>
                                 </article>
@@ -364,7 +377,7 @@ const About = () => {
             </section>
 
             {/* Guiding Principle */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
                         <div>
@@ -388,11 +401,17 @@ const About = () => {
                                         key={principle.title}
                                         className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
                                     >
-                                        <Icon className="h-7 w-7 text-[#C9A24D]" />
-                                        <h3 className="mt-5 text-xl font-bold">
-                                            {principle.title}
-                                        </h3>
-                                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                                        <div className="flex items-center gap-4">
+                                            <Icon className="h-7 w-7 shrink-0 text-[#C9A24D]" />
+
+                                            <h3 className="text-xl font-bold leading-tight text-white">
+                                                {principle.title}
+                                            </h3>
+                                        </div>
+
+                                        <div className="mt-4 h-px bg-white/10" />
+
+                                        <p className="mt-4 text-sm leading-7 text-slate-300">
                                             {principle.description}
                                         </p>
                                     </article>
@@ -404,19 +423,19 @@ const About = () => {
             </section>
 
             {/* Positioning */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+            <section className="py-6 md:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Our Positioning
                         </p>
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                             At the intersection of global health, research,
-                            policy, and implementation.
+                            policy, & implementation.
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                         <p>
                             Llorick Consulting exists at the intersection of
                             global health, research, policy, and implementation.
@@ -439,7 +458,7 @@ const About = () => {
             </section>
 
             {/* Approach */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -450,19 +469,23 @@ const About = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-4">
+                    <div className="mt-6 md:mt-12 grid gap-6 lg:grid-cols-4">
                         {approach.map((item) => (
                             <article
                                 key={item.title}
                                 className="rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm"
                             >
-                                <span className="text-sm font-bold text-[#C9A24D]">
-                                    {item.step}
-                                </span>
-                                <h3 className="mt-5 text-2xl font-bold text-[#0F172A]">
-                                    {item.title}
-                                </h3>
-                                <p className="mt-4 text-sm leading-7 text-slate-600">
+                                <div className="flex items-center gap-4">
+                                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#C9A24D]/30 bg-[#C9A24D]/10 text-sm font-bold text-[#C9A24D]">
+                                        {item.step}
+                                    </span>
+
+                                    <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                        {item.title}
+                                    </h3>
+                                </div>
+
+                                <p className="mt-5 text-sm leading-7 text-slate-600">
                                     {item.description}
                                 </p>
                             </article>
@@ -472,13 +495,16 @@ const About = () => {
             </section>
 
             {/* Leadership */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+            <section className="py-6 md:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
                     <div className="rounded-[2rem] bg-[#0F172A] p-8 text-white md:p-12">
-                        <BookOpen className="h-10 w-10 text-[#C9A24D]" />
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Leadership
-                        </p>
+                        <div className="flex items-center gap-3">
+                            <BookOpen className="h-8 w-8 text-[#C9A24D]" />
+
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Leadership
+                            </p>
+                        </div>
                         <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                             Led by global health experience and institutional
                             perspective.
@@ -494,7 +520,7 @@ const About = () => {
                     </div>
 
                     <div>
-                        <div className="space-y-6 text-lg leading-9 text-slate-600">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                             <p>
                                 Llorick Consulting was founded by Erick Agure, a
                                 global health and public health professional
@@ -522,36 +548,28 @@ const About = () => {
                                 health impact.
                             </p>
                         </div>
-
-                        <div className="mt-8 flex flex-wrap gap-3">
-                            {institutions.map((item) => (
-                                <span
-                                    key={item}
-                                    className="rounded-full border border-slate-200 bg-[#F8FAFC] px-4 py-2 text-xs font-semibold text-slate-700"
-                                >
-                                    {item}
-                                </span>
-                            ))}
-                        </div>
                     </div>
                 </div>
             </section>
 
             {/* Global Outlook */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+                    <div className="grid gap-6 md:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
                         <div>
-                            <Sparkles className="h-10 w-10 text-[#C9A24D]" />
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                                Our Global Outlook
-                            </p>
+                            <div className="flex items-center gap-3">
+                                <Sparkles className="h-8 w-8 text-[#C9A24D]" />
+
+                                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                    Our Global Outlook
+                                </p>
+                            </div>
                             <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                                 Global perspective. Grounded understanding.
                             </h2>
                         </div>
 
-                        <div className="space-y-6 text-lg leading-9 text-slate-300">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-300">
                             <p>
                                 Public health challenges are increasingly
                                 interconnected. Climate change, nutrition,
