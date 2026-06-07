@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { services } from "../../data/services";
+import SEO from "../../components/seo/SEO";
 
 const Services = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Global Health Consulting Services"
+                description="Explore Llorick Consulting's services in global health advisory, health systems strengthening, research, monitoring and evaluation, policy advisory, capacity building, and sustainable development."
+                path="/services"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />

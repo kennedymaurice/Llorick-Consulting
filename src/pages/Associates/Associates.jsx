@@ -15,6 +15,7 @@ import {
     Sparkles,
     Users,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const expertiseAreas = [
     {
@@ -132,17 +133,22 @@ const expertiseAreas = [
 const Associates = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Associates & Experts"
+                description="Meet Llorick Consulting's multidisciplinary network of global health specialists, researchers, policy advisors, MEL experts, trainers, and development practitioners."
+                path="/associates"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-5xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Associates & Experts
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Diverse Expertise. Shared Purpose. Collective
                             Impact.
                         </h1>
@@ -164,25 +170,22 @@ const Associates = () => {
                                 of perspectives, skills, and experience tailored
                                 to their specific needs.
                             </p>
-
-                            <p>
-                                Together, we work to transform evidence into
-                                action and action into lasting impact.
-                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Network Approach */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <Network className="h-10 w-10 text-[#C9A24D]" />
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
+                        <div className="flex items-center gap-3">
+                            <Network className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Our Network Approach
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Our Network Approach
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                             Flexible expertise for complex public health and
@@ -190,7 +193,7 @@ const Associates = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Today&apos;s challenges are increasingly
                             interconnected.
@@ -225,7 +228,7 @@ const Associates = () => {
             </section>
 
             {/* Areas of Expertise */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6- md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -238,7 +241,7 @@ const Associates = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="mt-6 md:mt-12 grid gap-6 lg:grid-cols-2">
                         {expertiseAreas.map((item) => {
                             const Icon = item.icon;
 
@@ -247,21 +250,23 @@ const Associates = () => {
                                     key={item.title}
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
-                                    <div className="border-b border-slate-200 p-8">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                    <div className="border-b border-slate-200 p-6 md:p-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#0F172A]">
-                                            {item.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                                {item.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 leading-7 text-slate-600">
                                             {item.description}
                                         </p>
                                     </div>
 
-                                    <div className="bg-white p-8">
+                                    <div className="bg-white p-5 md:p-8">
                                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                             Areas of expertise may include
                                         </p>
@@ -288,8 +293,8 @@ const Associates = () => {
             </section>
 
             {/* How We Work */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             How We Work
@@ -300,8 +305,8 @@ const Associates = () => {
                         </h2>
                     </div>
 
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
+                        <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                             <p>
                                 For each assignment, Llorick Consulting
                                 identifies the expertise required to achieve the
@@ -327,39 +332,29 @@ const Associates = () => {
             </section>
 
             {/* Leadership */}
-            <section className="bg-[#0F172A] py-24 text-white">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div>
-                        <div className="relative mb-8 h-36 w-36 overflow-hidden rounded-[2rem] border border-[#C9A24D]/30 bg-white/5 shadow-2xl">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
+                        <div className="relative h-72 overflow-hidden md:h-80">
                             <img
                                 src="/erick.jpg"
                                 alt="Erick Agure"
-                                className="h-full w-full object-cover"
+                                className="h-full w-full object-cover object-top"
                             />
                         </div>
 
-                        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Leadership
-                        </p>
+                        <div className="p-6 md:p-7">
+                            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+                                Erick Agure
+                            </h2>
 
-                        <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
-                            Erick Agure
-                        </h2>
-
-                        <p className="mt-4 text-xl font-semibold text-[#C9A24D]">
-                            Founder & Lead Consultant
-                        </p>
-
-                        <Link
-                            to="/leadership"
-                            className="mt-8 inline-flex items-center rounded-full bg-[#C9A24D] px-7 py-4 text-sm font-bold text-[#0F172A] transition hover:bg-white"
-                        >
-                            View Leadership Profile
-                            <ArrowRight className="ml-2 h-4 w-4" />
-                        </Link>
+                            <p className="mt-3 text-lg font-semibold text-[#C9A24D]">
+                                Founder & Lead Consultant
+                            </p>
+                        </div>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-300">
+                    <div className="space-y-6 text-lg leading-8 text-slate-300">
                         <p>
                             Erick Agure is a global health professional,
                             researcher, policy advisor, and development
@@ -384,26 +379,36 @@ const Associates = () => {
                             quality oversight across Llorick Consulting&apos;s
                             work.
                         </p>
+
+                        <Link
+                            to="/leadership"
+                            className="mt-4 inline-flex items-center rounded-full bg-[#C9A24D] px-7 py-4 text-sm font-bold text-[#0F172A] transition hover:bg-white"
+                        >
+                            View Leadership Profile
+                            <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
                     </div>
                 </div>
             </section>
 
             {/* Collaborating for Greater Impact */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <Sparkles className="h-10 w-10 text-[#C9A24D]" />
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
+                        <div className="flex items-center gap-3">
+                            <Sparkles className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Collaborating for Greater Impact
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Collaborating for Greater Impact
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                             Meaningful change is achieved through collaboration.
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Llorick Consulting recognizes that meaningful change
                             is achieved through collaboration.
@@ -429,7 +434,7 @@ const Associates = () => {
             </section>
 
             {/* Join Network CTA */}
-            <section className="pb-24">
+            <section className="pb-6 md:pb-12 lg:pb-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-[2rem] bg-[#0F172A] p-8 text-center text-white md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">

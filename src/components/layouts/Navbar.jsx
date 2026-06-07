@@ -46,13 +46,15 @@ const Navbar = () => {
                 )}
 
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 lg:px-8">
-                    <Link to="/" className="group flex flex-col">
-                        <span className="text-2xl font-semibold tracking-[0.04em] text-white">
-                            LLORICK
-                        </span>
-                        <span className="text-[10px] uppercase tracking-[0.45em] text-[#C9A24D]">
-                            CONSULTING
-                        </span>
+                    <Link
+                        to="/"
+                        className="group flex items-center transition-opacity duration-300 hover:opacity-90"
+                    >
+                        <img
+                            src="/llorick-logo-horizontal-white.png"
+                            alt="Llorick Consulting"
+                            className="h-14 w-auto"
+                        />
                     </Link>
 
                     <nav className="hidden items-center gap-8 lg:flex">
@@ -177,12 +179,11 @@ const Navbar = () => {
                             onClick={closeMobile}
                             className="flex flex-col"
                         >
-                            <span className="text-2xl font-semibold tracking-[0.04em] text-white">
-                                LLORICK
-                            </span>
-                            <span className="text-[10px] uppercase tracking-[0.45em] text-[#C9A24D]">
-                                CONSULTING
-                            </span>
+                            <img
+                                src="/llorick-logo-horizontal-white.png"
+                                alt="Llorick Consulting"
+                                className="h-14 w-auto"
+                            />
                         </Link>
 
                         <button

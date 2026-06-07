@@ -28,12 +28,11 @@ const SplashScreen = () => {
                 }}
             >
                 <div className="text-center">
-                    <p className="text-4xl font-semibold tracking-[0.12em] text-white sm:text-5xl">
-                        LLORICK
-                    </p>
-                    <p className="mt-2 text-xs font-semibold uppercase tracking-[0.55em] text-[#C9A24D]">
-                        Consulting
-                    </p>
+                    <img
+                        src="/llorick-logo-horizontal-white.png"
+                        alt="Llorick Consulting"
+                        className="h-14 w-auto"
+                    />
                 </div>
             </motion.div>
 

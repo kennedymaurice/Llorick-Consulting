@@ -1,15 +1,16 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_NAME = "Dr. Peter Waweru";
-const SITE_URL = "https://www.peterwaweru.co.ke";
+const SITE_NAME = "Llorick Consulting";
+const SITE_URL = "https://www.llorickconsulting.com";
 
 const SEO = ({
     title,
     description,
     path = "",
-    image = "/peter-waweru.webp",
+    image = "/llorick-icon.png",
     type = "website",
     schema,
+    noindex = false,
 }) => {
     const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
     const canonicalUrl = `${SITE_URL}${path}`;
@@ -20,7 +21,10 @@ const SEO = ({
             <meta name="description" content={description} />
 
             <link rel="canonical" href={canonicalUrl} />
-            <meta name="robots" content="index, follow" />
+            <meta
+                name="robots"
+                content={noindex ? "noindex, nofollow" : "index, follow"}
+            />
 
             <meta property="og:site_name" content={SITE_NAME} />
             <meta property="og:title" content={fullTitle} />

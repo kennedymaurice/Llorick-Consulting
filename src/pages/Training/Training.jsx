@@ -17,6 +17,7 @@ import {
     Target,
     Users,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const philosophy = [
     {
@@ -214,7 +215,6 @@ const formats = [
 const audiences = [
     "Government Ministries and Agencies",
     "NGOs and Civil Society Organizations",
-    "Development Partners",
     "Research Institutions",
     "Universities and Academic Institutions",
     "Healthcare Organizations",
@@ -226,17 +226,22 @@ const audiences = [
 const Training = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Training & Capacity Building"
+                description="Professional training, leadership development, monitoring and evaluation training, research methods, public health capacity building, and institutional strengthening programs."
+                path="/training"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-5xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Training & Capacity Building
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Building Knowledge. Strengthening Capacity. Creating
                             Impact.
                         </h1>
@@ -257,23 +262,15 @@ const Training = () => {
                                 communities to achieve meaningful and lasting
                                 impact.
                             </p>
-
-                            <p>
-                                Our training approach combines global
-                                perspectives, practical experience,
-                                evidence-based methodologies, and participatory
-                                learning to support real-world application and
-                                measurable results.
-                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Why Capacity Building Matters */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Why Capacity Building Matters
                         </p>
@@ -307,7 +304,7 @@ const Training = () => {
             </section>
 
             {/* Training Philosophy */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -320,7 +317,7 @@ const Training = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
+                    <div className="mt-6 md:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
                         {philosophy.map((item) => {
                             const Icon = item.icon;
 
@@ -329,13 +326,15 @@ const Training = () => {
                                     key={item.title}
                                     className="group rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                 >
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
-                                        <Icon className="h-5 w-5" />
-                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
+                                            <Icon className="h-5 w-5" />
+                                        </div>
 
-                                    <h3 className="mt-6 text-xl font-bold text-[#0F172A]">
-                                        {item.title}
-                                    </h3>
+                                        <h3 className="text-xl font-bold leading-tight text-[#0F172A]">
+                                            {item.title}
+                                        </h3>
+                                    </div>
 
                                     <p className="mt-4 text-sm leading-7 text-slate-600">
                                         {item.description}
@@ -348,7 +347,7 @@ const Training = () => {
             </section>
 
             {/* Training Areas */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -361,7 +360,7 @@ const Training = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="mt-6 md:mt-12 grid gap-6 lg:grid-cols-2">
                         {trainingAreas.map((area) => {
                             const Icon = area.icon;
 
@@ -370,21 +369,23 @@ const Training = () => {
                                     key={area.title}
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
-                                    <div className="border-b border-slate-200 p-8">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                    <div className="border-b border-slate-200 p-6 md:p-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#0F172A]">
-                                            {area.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                                {area.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 leading-7 text-slate-600">
                                             {area.description}
                                         </p>
                                     </div>
 
-                                    <div className="bg-[#F8FAFC] p-8">
+                                    <div className="bg-[#F8FAFC] p-4 md:p-8">
                                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                             Topics may include
                                         </p>
@@ -411,9 +412,9 @@ const Training = () => {
             </section>
 
             {/* Training Formats */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                         <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Training Formats
@@ -440,11 +441,13 @@ const Training = () => {
                                         key={format.title}
                                         className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
                                     >
-                                        <Icon className="h-7 w-7 text-[#C9A24D]" />
+                                        <div className="flex items-center gap-4">
+                                            <Icon className="h-7 w-7 shrink-0 text-[#C9A24D]" />
 
-                                        <h3 className="mt-5 text-xl font-bold text-white">
-                                            {format.title}
-                                        </h3>
+                                            <h3 className="text-xl font-bold leading-tight text-white">
+                                                {format.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-3 text-sm leading-7 text-slate-300">
                                             {format.description}
@@ -458,9 +461,9 @@ const Training = () => {
             </section>
 
             {/* Who We Work With */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Who We Work With
                         </p>
@@ -488,10 +491,10 @@ const Training = () => {
             </section>
 
             {/* Tailored Learning Solutions */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-white p-8 shadow-sm md:p-14">
-                        <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+                    <div className="rounded-[2rem] bg-white p-6 shadow-sm md:p-14">
+                        <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
                             <div>
                                 <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                     Tailored Learning Solutions
@@ -503,7 +506,7 @@ const Training = () => {
                                 </h2>
                             </div>
 
-                            <div className="space-y-6 text-lg leading-9 text-slate-600">
+                            <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                                 <p>
                                     Every organization faces unique challenges.
                                 </p>
@@ -531,9 +534,9 @@ const Training = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-[#0F172A] p-8 text-center text-white md:p-16">
+                    <div className="rounded-[2rem] bg-[#0F172A] p-6 text-center text-white md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Let&apos;s Strengthen Capacity Together
                         </p>

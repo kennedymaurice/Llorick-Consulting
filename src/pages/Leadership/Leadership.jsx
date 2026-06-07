@@ -15,6 +15,7 @@ import {
     Target,
     Users,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const expertiseAreas = [
     "Global Health",
@@ -90,17 +91,23 @@ const selectedInterests = [
 const Leadership = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Erick Agure | Founder & Lead Consultant"
+                description="Learn about Erick Agure, global health professional, researcher, policy advisor, and Founder of Llorick Consulting with experience across Africa, Europe, and North America."
+                path="/leadership"
+                type="profile"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-32">
+                <div className="relative mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
                     <div>
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Leadership & Expertise
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Bridging Research, Policy, and Practice to Advance
                             Global Health.
                         </h1>
@@ -143,7 +150,7 @@ const Leadership = () => {
 
                             <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/30 to-transparent" />
 
-                            <div className="absolute bottom-0 left-0 right-0 p-8">
+                            <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#C9A24D]">
                                     Founder & Lead Consultant
                                 </p>
@@ -154,7 +161,7 @@ const Leadership = () => {
                             </div>
                         </div>
 
-                        <div className="p-8">
+                        <div className="p-6 md:p-8">
                             <p className="leading-8 text-slate-300">
                                 Global health professional, researcher, policy
                                 advisor, and development practitioner with
@@ -162,7 +169,7 @@ const Leadership = () => {
                                 America.
                             </p>
 
-                            <div className="mt-8 grid grid-cols-2 gap-3">
+                            <div className="mt-6 md:mt-8 grid grid-cols-2 gap-3">
                                 {[
                                     "Global Health",
                                     "Research",
@@ -182,7 +189,7 @@ const Leadership = () => {
                                 ))}
                             </div>
 
-                            <div className="mt-8 rounded-2xl border border-[#C9A24D]/20 bg-[#C9A24D]/10 p-5">
+                            <div className="mt-6 md:mt-8 rounded-2xl border border-[#C9A24D]/20 bg-[#C9A24D]/10 p-5">
                                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                     Guiding Principle
                                 </p>
@@ -197,14 +204,16 @@ const Leadership = () => {
             </section>
 
             {/* Global Perspective */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <Globe2 className="h-10 w-10 text-[#C9A24D]" />
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
+                        <div className="flex items-center gap-4">
+                            <Globe2 className="h-8 w-8 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            A Global Perspective on Health and Development
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                                A Global Perspective on Health and Development
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                             Working at the intersection of public health,
@@ -212,7 +221,7 @@ const Leadership = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                         <p>
                             Throughout his career, Erick has worked at the
                             intersection of public health, research, policy, and
@@ -241,8 +250,8 @@ const Leadership = () => {
             </section>
 
             {/* Areas of Expertise */}
-            <section className="bg-[#F8FAFC] py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
                     <div className="lg:sticky lg:top-28">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Areas of Expertise
@@ -277,10 +286,10 @@ const Leadership = () => {
             </section>
 
             {/* Professional Experience */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-                        <div>
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                        <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Professional Experience
                             </p>
@@ -306,7 +315,7 @@ const Leadership = () => {
                                 return (
                                     <article
                                         key={item.title}
-                                        className="rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm"
+                                        className="rounded-[1.5rem] border border-slate-200 bg-white p-5 md:p-7 shadow-sm"
                                     >
                                         <div className="flex gap-5">
                                             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
@@ -332,16 +341,17 @@ const Leadership = () => {
             </section>
 
             {/* International Exposure */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                         <div>
-                            <Network className="h-10 w-10 text-[#C9A24D]" />
+                            <div className="flex items-center gap-3">
+                                <Network className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                            <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                                International Exposure and Collaboration
-                            </p>
-
+                                <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                    International Exposure and Collaboration
+                                </p>
+                            </div>
                             <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                                 Collaboration, learning, research, and
                                 professional engagement across diverse global
@@ -360,7 +370,7 @@ const Leadership = () => {
                             {regions.map((region) => (
                                 <article
                                     key={region.title}
-                                    className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6"
+                                    className="rounded-[1.5rem] border border-white/10 bg-white/5 p-5 md:p-6"
                                 >
                                     <h3 className="text-2xl font-bold text-white">
                                         {region.title}
@@ -386,14 +396,16 @@ const Leadership = () => {
             </section>
 
             {/* Academic Background */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <BookOpenText className="h-10 w-10 text-[#C9A24D]" />
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-12">
+                        <div className="flex items-center gap-3">
+                            <BookOpenText className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Academic and Research Background
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Academic and Research Background
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
                             A strong commitment to evidence, learning, and
@@ -425,8 +437,8 @@ const Leadership = () => {
             </section>
 
             {/* Thought Leadership */}
-            <section className="bg-[#F8FAFC] py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Thought Leadership and Knowledge Sharing
@@ -465,14 +477,16 @@ const Leadership = () => {
             </section>
 
             {/* Leadership Philosophy */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#0F172A] p-8 text-white md:p-12">
-                        <Handshake className="h-10 w-10 text-[#C9A24D]" />
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#0F172A] p-6 md:p-12 text-white">
+                        <div className="flex items-center gap-3">
+                            <Handshake className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Leadership Philosophy
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Leadership Philosophy
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                             Technical excellence, humility, collaboration, and
@@ -505,8 +519,8 @@ const Leadership = () => {
             </section>
 
             {/* Selected Areas of Interest */}
-            <section className="bg-[#F8FAFC] py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
                     <div className="lg:sticky lg:top-28">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Selected Areas of Interest
@@ -535,14 +549,16 @@ const Leadership = () => {
             </section>
 
             {/* Looking Forward */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-[#0F172A] p-8 text-center text-white md:p-16">
-                        <Sparkles className="mx-auto h-10 w-10 text-[#C9A24D]" />
+                    <div className="rounded-[2rem] bg-[#0F172A] p-6 md:p-12 text-center text-white">
+                        <div className="flex justify-center items-center gap-3">
+                            <Sparkles className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Looking Forward
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Looking Forward
+                            </p>
+                        </div>
 
                         <h2 className="mx-auto mt-4 max-w-4xl text-4xl font-bold tracking-tight md:text-5xl">
                             Advancing solutions that create lasting public

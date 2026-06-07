@@ -69,12 +69,11 @@ const Footer = () => {
                 <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_0.9fr_1fr] lg:px-8">
                     <div>
                         <Link to="/" className="inline-flex flex-col">
-                            <span className="text-2xl font-semibold tracking-[0.04em] text-white">
-                                LLORICK
-                            </span>
-                            <span className="text-[10px] uppercase tracking-[0.45em] text-[#C9A24D]">
-                                CONSULTING
-                            </span>
+                            <img
+                                src="/llorick-logo-horizontal-white.png"
+                                alt="Llorick Consulting"
+                                className="h-14 w-auto"
+                            />
                         </Link>
 
                         <p className="mt-6 max-w-md leading-8 text-slate-300">

@@ -16,6 +16,7 @@ import {
     Target,
     Users,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const philosophy = [
     {
@@ -184,17 +185,22 @@ const partnershipModels = [
 const Partnerships = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Partnerships & Collaboration"
+                description="Partner with Llorick Consulting through technical advisory, research collaborations, consortium partnerships, capacity-building initiatives, and development programs."
+                path="/partnerships"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-5xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Partnerships
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Advancing Impact Through Strategic Partnerships.
                         </h1>
 
@@ -226,9 +232,9 @@ const Partnerships = () => {
             </section>
 
             {/* Partnership Philosophy */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                         <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Our Partnership Philosophy
@@ -253,15 +259,17 @@ const Partnerships = () => {
                                 return (
                                     <article
                                         key={item.title}
-                                        className="group rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
+                                        className="group rounded-[1.5rem] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                     >
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-xl font-bold text-[#0F172A]">
-                                            {item.title}
-                                        </h3>
+                                            <h3 className="text-xl font-bold leading-tight text-[#0F172A]">
+                                                {item.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 text-sm leading-7 text-slate-600">
                                             {item.description}
@@ -275,7 +283,7 @@ const Partnerships = () => {
             </section>
 
             {/* Who We Partner With */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -288,7 +296,7 @@ const Partnerships = () => {
                         </h2>
                     </div>
 
-                    <div className="mt-12 grid gap-6 lg:grid-cols-2">
+                    <div className="mt-6 md:mt-12 grid gap-6 lg:grid-cols-2">
                         {partners.map((partner) => {
                             const Icon = partner.icon;
 
@@ -297,21 +305,23 @@ const Partnerships = () => {
                                     key={partner.title}
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
-                                    <div className="border-b border-slate-200 p-8">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                    <div className="border-b border-slate-200 p-6 md:p-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#0F172A]">
-                                            {partner.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                                {partner.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 leading-7 text-slate-600">
                                             {partner.description}
                                         </p>
                                     </div>
 
-                                    <div className="bg-[#F8FAFC] p-8">
+                                    <div className="bg-[#F8FAFC] p-5 md:p-8">
                                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                             Potential areas of collaboration
                                             include
@@ -339,9 +349,9 @@ const Partnerships = () => {
             </section>
 
             {/* Partnership Models */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+                    <div className="grid gap-6 md:gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
                         <div className="lg:sticky lg:top-28">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Partnership Models
@@ -367,7 +377,7 @@ const Partnerships = () => {
                                 return (
                                     <article
                                         key={model.title}
-                                        className="rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm"
+                                        className="rounded-[1.5rem] border border-slate-200 bg-white p-5 md:p-7 shadow-sm"
                                     >
                                         <div className="flex gap-5">
                                             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
@@ -393,14 +403,16 @@ const Partnerships = () => {
             </section>
 
             {/* Global Perspective */}
-            <section className="bg-[#0F172A] py-24 text-white">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div>
-                        <Handshake className="h-10 w-10 text-[#C9A24D]" />
+                        <div className="flex items-center gap-4">
+                            <Handshake className="h-8 w-8 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Global Perspective, Local Understanding
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
+                                Global Perspective, Local Understanding
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                             Technically sound solutions that remain responsive
@@ -408,7 +420,7 @@ const Partnerships = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-300">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-300">
                         <p>
                             Our work is informed by experience and collaboration
                             across diverse cultural, institutional, and
@@ -431,9 +443,9 @@ const Partnerships = () => {
             </section>
 
             {/* CTA */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 text-center md:p-16">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 text-center md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Let&apos;s Work Together
                         </p>

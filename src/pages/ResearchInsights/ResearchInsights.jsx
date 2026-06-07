@@ -14,6 +14,7 @@ import {
     Network,
     Sparkles,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const focusAreas = [
     {
@@ -105,17 +106,22 @@ const focusAreas = [
 const ResearchInsights = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Research & Insights"
+                description="Evidence-based insights on global health, public health policy, monitoring and evaluation, health systems strengthening, climate and health, nutrition, and sustainable development."
+                path="/research-insights"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto grid max-w-7xl gap-14 px-5 py-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8 lg:py-32">
+                <div className="relative mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
                     <div>
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Research & Insights
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Insights That Inform Better Decisions.
                         </h1>
 
@@ -141,11 +147,13 @@ const ResearchInsights = () => {
                     </div>
 
                     <div className="rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-2xl backdrop-blur">
-                        <Brain className="h-12 w-12 text-[#C9A24D]" />
+                        <div className="flex items-center gap-4">
+                            <Brain className="h-12 w-12 shrink-0 text-[#C9A24D]" />
 
-                        <h2 className="mt-8 text-3xl font-bold text-white">
-                            Evidence for action.
-                        </h2>
+                            <h2 className="text-3xl font-bold text-white">
+                                Evidence for action.
+                            </h2>
+                        </div>
 
                         <p className="mt-5 leading-8 text-slate-300">
                             Translating complex evidence into accessible,
@@ -177,9 +185,9 @@ const ResearchInsights = () => {
             </section>
 
             {/* Why Research Matters */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
-                    <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+                    <div className="rounded-[2rem] bg-[#F8FAFC] p-6 md:p-8 lg:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Why Research Matters
                         </p>
@@ -190,7 +198,7 @@ const ResearchInsights = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-9 text-slate-600">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-9 text-slate-600">
                         <p>
                             Public health challenges continue to evolve in
                             complexity. From climate change and disease
@@ -217,7 +225,7 @@ const ResearchInsights = () => {
             </section>
 
             {/* Focus Areas */}
-            <section className="bg-[#F8FAFC] py-24">
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -239,21 +247,23 @@ const ResearchInsights = () => {
                                     key={area.title}
                                     className="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-sm"
                                 >
-                                    <div className="border-b border-slate-200 p-8">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
+                                    <div className="border-b border-slate-200 p-6 md:p-8">
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D]">
+                                                <Icon className="h-5 w-5" />
+                                            </div>
 
-                                        <h3 className="mt-6 text-2xl font-bold text-[#0F172A]">
-                                            {area.title}
-                                        </h3>
+                                            <h3 className="text-2xl font-bold leading-tight text-[#0F172A]">
+                                                {area.title}
+                                            </h3>
+                                        </div>
 
                                         <p className="mt-4 leading-7 text-slate-600">
                                             {area.description}
                                         </p>
                                     </div>
 
-                                    <div className="p-8">
+                                    <div className="p-6 md:p-8">
                                         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                             Topics may include
                                         </p>
@@ -280,8 +290,8 @@ const ResearchInsights = () => {
             </section>
 
             {/* Featured Publications */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div>
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Featured Publications and Commentary
@@ -302,7 +312,13 @@ const ResearchInsights = () => {
                     </div>
 
                     <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
-                        <BookOpenText className="h-10 w-10 text-[#C9A24D]" />
+                        <div className="flex items-center gap-3">
+                            <BookOpenText className="h-10 w-10 shrink-0 text-[#C9A24D]" />
+
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Publications & Commentary
+                            </p>
+                        </div>
 
                         <div className="mt-7 space-y-6 text-lg leading-9 text-slate-600">
                             <p>
@@ -323,14 +339,16 @@ const ResearchInsights = () => {
             </section>
 
             {/* Knowledge for Action */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
                 <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
                     <div>
-                        <Sparkles className="h-10 w-10 text-[#C9A24D]" />
+                        <div className="flex items-center gap-3">
+                            <Sparkles className="h-10 w-10 shrink-0 text-[#C9A24D]" />
 
-                        <p className="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
-                            Knowledge for Action
-                        </p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
+                                Knowledge for Action
+                            </p>
+                        </div>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight md:text-5xl">
                             Research has the greatest value when it informs
@@ -359,7 +377,7 @@ const ResearchInsights = () => {
             </section>
 
             {/* Collaborate With Us */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-[2rem] bg-[#F8FAFC] p-8 text-center md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">

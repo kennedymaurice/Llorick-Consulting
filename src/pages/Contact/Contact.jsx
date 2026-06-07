@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
     ArrowRight,
@@ -15,6 +16,7 @@ import {
     Sparkles,
     Users,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const inquiryTypes = [
     {
@@ -106,19 +108,106 @@ const inquiryOptions = [
 ];
 
 const Contact = () => {
+    const WHATSAPP_NUMBER = "254112400961";
+
+    const [formData, setFormData] = useState({
+        fullName: "",
+        organization: "",
+        position: "",
+        country: "",
+        email: "",
+        phone: "",
+        inquiryType: "",
+        subject: "",
+        message: "",
+    });
+
+    const [errors, setErrors] = useState({});
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+
+        setFormData((prev) => ({
+            ...prev,
+            [name]: value,
+        }));
+
+        setErrors((prev) => ({
+            ...prev,
+            [name]: "",
+        }));
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const requiredFields = {
+            fullName: "Full name is required",
+            organization: "Organization is required",
+            country: "Country is required",
+            email: "Email address is required",
+            phone: "Phone number is required",
+            inquiryType: "Type of inquiry is required",
+            subject: "Subject is required",
+            message: "Message is required",
+        };
+
+        const validationErrors = {};
+
+        Object.entries(requiredFields).forEach(([field, message]) => {
+            if (!formData[field].trim()) {
+                validationErrors[field] = message;
+            }
+        });
+
+        if (Object.keys(validationErrors).length > 0) {
+            setErrors(validationErrors);
+            return;
+        }
+
+        const whatsappMessage = `
+Hello Llorick Consulting,
+
+I would like to make an inquiry.
+
+- Full Name: ${formData.fullName}
+- Organization: ${formData.organization}
+- Position/Title: ${formData.position || "Not provided"}
+- Country: ${formData.country}
+- Email: ${formData.email}
+- Phone: ${formData.phone}
+- Type of Inquiry: ${formData.inquiryType}
+
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+    `.trim();
+
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    };
+
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Contact Llorick Consulting"
+                description="Get in touch with Llorick Consulting for global health advisory, research collaboration, monitoring and evaluation, training, policy support, and partnership opportunities."
+                path="/contact"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
 
-                <div className="relative mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+                <div className="relative mx-auto max-w-7xl px-5 pt-24 pb-5 lg:px-8 lg:pt-32 lg:pb-16">
                     <div className="max-w-5xl">
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             Contact Llorick Consulting
                         </div>
 
-                        <h1 className="mt-6 text-5xl font-bold tracking-tight text-white md:text-6xl">
+                        <h1 className="mt-6 text-3xl font-bold tracking-tight text-white md:text-6xl">
                             Let&apos;s Start a Meaningful Conversation.
                         </h1>
 
@@ -145,9 +234,9 @@ const Contact = () => {
             </section>
 
             {/* Inquiry Types */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
-                    <div className="max-w-3xl">
+                    <div className="md:text-center">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             How Can We Support You?
                         </p>
@@ -162,22 +251,24 @@ const Contact = () => {
                         </p>
                     </div>
 
-                    <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="mt-6 md:mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         {inquiryTypes.map((item) => {
                             const Icon = item.icon;
 
                             return (
                                 <article
                                     key={item.title}
-                                    className="group rounded-[1.5rem] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
+                                    className="group rounded-[1.5rem] border border-slate-200 bg-white p-5 md:p-7 shadow-sm transition hover:-translate-y-1 hover:border-[#C9A24D]/60 hover:shadow-xl"
                                 >
-                                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
-                                        <Icon className="h-5 w-5" />
-                                    </div>
+                                    <div className="flex items-center gap-4">
+                                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F172A] text-[#C9A24D] transition group-hover:bg-[#C9A24D] group-hover:text-[#0F172A]">
+                                            <Icon className="h-5 w-5" />
+                                        </div>
 
-                                    <h3 className="mt-6 text-xl font-bold text-[#0F172A]">
-                                        {item.title}
-                                    </h3>
+                                        <h3 className="text-xl font-bold leading-tight text-[#0F172A]">
+                                            {item.title}
+                                        </h3>
+                                    </div>
 
                                     <p className="mt-4 text-sm leading-7 text-slate-600">
                                         {item.description}
@@ -190,20 +281,19 @@ const Contact = () => {
             </section>
 
             {/* Work With Us / Form */}
-            <section className="bg-[#F8FAFC] py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
-                    <div>
+            <section className="bg-[#F8FAFC] py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
+                    <div className="lg:sticky lg:top-28">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Work With Us
                         </p>
 
                         <h2 className="mt-4 text-4xl font-bold tracking-tight text-[#0F172A] md:text-5xl">
-                            We welcome opportunities to contribute technical
-                            expertise, thought leadership, and collaborative
-                            solutions.
+                            Delivering expertise, thought leadership, and
+                            practical solutions.
                         </h2>
 
-                        <div className="mt-7 space-y-6 text-lg leading-9 text-slate-600">
+                        <div className="mt-7 space-y-4 md:space-y-6 text-lg leading-8 text-slate-600">
                             <p>
                                 Llorick Consulting collaborates with
                                 organizations and institutions operating across
@@ -220,7 +310,7 @@ const Contact = () => {
                             </p>
                         </div>
 
-                        <div className="mt-10 rounded-[2rem] bg-[#0F172A] p-8 text-white">
+                        <div className="mt-6 md:mt-10 rounded-[2rem] bg-[#0F172A] p-8 text-white">
                             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                                 Connect With Our Team
                             </p>
@@ -271,7 +361,10 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <form className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+                    <form
+                        onSubmit={handleSubmit}
+                        className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm md:p-8"
+                    >
                         <div>
                             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A24D]">
                                 Contact Form
@@ -289,9 +382,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="fullName"
+                                    value={formData.fullName}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Your full name"
                                 />
+                                {errors.fullName && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.fullName}
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -300,9 +401,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="organization"
+                                    value={formData.organization}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Organization name"
                                 />
+                                {errors.organization && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.organization}
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -311,9 +420,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="position"
+                                    value={formData.position}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Your role"
                                 />
+                                {errors.position && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.position}
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -322,9 +439,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="country"
+                                    value={formData.country}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Country"
                                 />
+                                {errors.country && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.country}
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -333,9 +458,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="you@example.com"
                                 />
+                                {errors.email && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.email}
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -344,16 +477,29 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="tel"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="+254..."
                                 />
+                                {errors.phone && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.phone}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="md:col-span-2">
                                 <label className="text-sm font-semibold text-slate-700">
                                     Type of Inquiry
                                 </label>
-                                <select className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10">
+                                <select
+                                    name="inquiryType"
+                                    value={formData.inquiryType}
+                                    onChange={handleChange}
+                                    className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
+                                >
                                     <option value="">
                                         Select inquiry type
                                     </option>
@@ -363,6 +509,11 @@ const Contact = () => {
                                         </option>
                                     ))}
                                 </select>
+                                {errors.inquiryType && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.inquiryType}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="md:col-span-2">
@@ -371,9 +522,17 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="subject"
+                                    value={formData.subject}
+                                    onChange={handleChange}
                                     className="mt-2 w-full rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Brief subject"
                                 />
+                                {errors.subject && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.subject}
+                                    </p>
+                                )}
                             </div>
 
                             <div className="md:col-span-2">
@@ -381,10 +540,18 @@ const Contact = () => {
                                     Message
                                 </label>
                                 <textarea
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     rows="6"
                                     className="mt-2 w-full resize-none rounded-2xl border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-[#C9A24D] focus:ring-4 focus:ring-[#C9A24D]/10"
                                     placeholder="Tell us about your inquiry, project, partnership idea, or support need."
                                 />
+                                {errors.message && (
+                                    <p className="mt-2 text-xs font-semibold text-red-600">
+                                        {errors.message}
+                                    </p>
+                                )}
                             </div>
                         </div>
 
@@ -400,8 +567,8 @@ const Contact = () => {
             </section>
 
             {/* Areas of Interest */}
-            <section className="py-24">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
+            <section className="py-6 md:py-12 lg:py-16">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-8">
                     <div className="rounded-[2rem] bg-[#F8FAFC] p-8 md:p-12">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
                             Areas of Interest
@@ -431,7 +598,7 @@ const Contact = () => {
             </section>
 
             {/* Why Organizations Choose */}
-            <section className="bg-[#0F172A] py-24 text-white">
+            <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="max-w-3xl">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">
@@ -453,11 +620,13 @@ const Contact = () => {
                                     key={reason.title}
                                     className="rounded-[1.5rem] border border-white/10 bg-white/5 p-7"
                                 >
-                                    <Icon className="h-8 w-8 text-[#C9A24D]" />
+                                    <div className="flex items-center gap-4">
+                                        <Icon className="h-8 w-8 shrink-0 text-[#C9A24D]" />
 
-                                    <h3 className="mt-6 text-xl font-bold text-white">
-                                        {reason.title}
-                                    </h3>
+                                        <h3 className="text-xl font-bold leading-tight text-white">
+                                            {reason.title}
+                                        </h3>
+                                    </div>
 
                                     <p className="mt-4 text-sm leading-7 text-slate-300">
                                         {reason.description}
@@ -470,7 +639,7 @@ const Contact = () => {
             </section>
 
             {/* Looking Forward */}
-            <section className="py-24">
+            <section className="py-6 md:py-12 lg:py-16">
                 <div className="mx-auto max-w-7xl px-5 lg:px-8">
                     <div className="rounded-[2rem] bg-[#F8FAFC] p-8 text-center md:p-16">
                         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#C9A24D]">

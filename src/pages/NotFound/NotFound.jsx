@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Compass, Home } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const NotFound = () => {
     return (
         <main className="flex min-h-screen items-center justify-center bg-[#0F172A] px-5 py-20">
+            <SEO
+                title="Page Not Found"
+                description="The page you are looking for could not be found."
+                path=""
+                noindex
+            />
             <div className="mx-auto max-w-3xl text-center">
                 <div className="inline-flex h-24 w-24 items-center justify-center rounded-full border border-[#C9A24D]/30 bg-[#C9A24D]/10">
                     <Compass className="h-10 w-10 text-[#C9A24D]" />

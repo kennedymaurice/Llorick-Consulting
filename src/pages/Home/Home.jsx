@@ -12,6 +12,7 @@ import {
     Users,
     LineChart,
 } from "lucide-react";
+import SEO from "../../components/seo/SEO";
 
 const services = [
     {
@@ -91,6 +92,11 @@ const framework = [
 const Home = () => {
     return (
         <main className="bg-white text-slate-900">
+            <SEO
+                title="Home"
+                description="Llorick Consulting is a global health, research, policy, and development advisory firm advancing evidence-based solutions for stronger health systems and sustainable impact."
+                path="/"
+            />
             {/* Hero */}
             <section className="relative overflow-hidden bg-[#0F172A]">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,162,77,0.22),transparent_34%),linear-gradient(135deg,rgba(255,255,255,0.06),transparent_45%)]" />
