@@ -105,8 +105,7 @@ const Home = () => {
                     <div>
                         <div className="mb-5 font-semibold uppercase inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-[#C9A24D] backdrop-blur">
                             <Globe2 className="h-4 w-4 text-[#C9A24D]" />
-                            Global Health • Research • Policy • Development
-                            Advisory
+                            Global Health • Research • Policy
                         </div>
 
                         <h1 className="max-w-5xl text-3xl font-bold tracking-tight text-white md:text-6xl">
