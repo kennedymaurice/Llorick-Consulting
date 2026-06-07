@@ -340,7 +340,7 @@ const ResearchInsights = () => {
 
             {/* Knowledge for Action */}
             <section className="bg-[#0F172A] py-6 md:py-12 lg:py-16 text-white">
-                <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+                <div className="mx-auto grid max-w-7xl gap-6 md:gap-14 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
                     <div>
                         <div className="flex items-center gap-3">
                             <Sparkles className="h-10 w-10 shrink-0 text-[#C9A24D]" />
@@ -356,7 +356,7 @@ const ResearchInsights = () => {
                         </h2>
                     </div>
 
-                    <div className="space-y-6 text-lg leading-8 text-slate-300">
+                    <div className="space-y-4 md:space-y-6 text-lg leading-8 text-slate-300">
                         <p>
                             Through our insights platform, we seek to foster
                             informed dialogue, encourage evidence-based
